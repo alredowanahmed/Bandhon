@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Viewer</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <iframe id="myIframe" src=""></iframe>
+
+    <script>
+        // আপনার ইউআরএল-টি এখানে Base64 ফরম্যাটে এনকোড করা আছে
+        // অরিজিনাল URL: https://ais-dev-e5zhapjlpj7ylukoehnt74-723690937047.asia-east1.run.app/
+        var encryptedUrl = "aHR0cHM6Ly9haXMtZGV2LWU1emhhcGpscGo3eWx1a29laG50NzQtNzIzNjkwOTM3MDQ3LmFzaWEtZWFzdDEucnVuLmFwcC8=";
+
+        // জাভাস্ক্রিপ্ট ব্যবহার করে এটি ডিকোড করা হচ্ছে
+        var decodedUrl = atob(encryptedUrl);
+
+        // আইফ্রেমের সোর্স হিসেবে সেট করা হচ্ছে
+        document.getElementById("myIframe").src = decodedUrl;
+    </script>
+
+</body>
+</html>
+
