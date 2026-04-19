@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "https://ais-dev-e5zhapjlpj7ylukoehnt74-723690937047.asia-east1.run.app/$1"
+    }
+  ]
+}
+
